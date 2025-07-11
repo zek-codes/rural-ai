@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rural AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 About Rural AI</h1>
+        
+        <div class="about-content">
+            <p class="subtitle">Your offline AI companion for rural living and agriculture</p>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🔌 Offline First</h3>
+                    <p>Works completely offline on your Raspberry Pi - no internet required.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🧑‍🌾 Agriculture Focused</h3>
+                    <p>Specialized knowledge about farming, crops, livestock, and rural living.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📱 Any Device</h3>
+                    <p>Access from phones, tablets, or computers via Wi-Fi hotspot.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🏫 Educational</h3>
+                    <p>Perfect for rural schools, community centers, and learning hubs.</p>
+                </div>
+            </div>
+            
+            <div class="tech-info">
+                <h3>🧠 Powered By</h3>
+                <ul>
+                    <li><strong>Phi-3-mini-4B:</strong> Microsoft's efficient open-source AI model</li>
+                    <li><strong>Flask:</strong> Lightweight web framework</li>
+                    <li><strong>llama.cpp:</strong> Fast local inference engine</li>
+                    <li><strong>Raspberry Pi:</strong> Affordable, portable computing</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="{{ url_for('index') }}" class="button">← Back to Chat</a>
+            <a href="{{ url_for('health_check') }}" class="button">System Health</a>
+        </div>
+    </div>
+</body>
+</html>

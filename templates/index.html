@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Rural AI Assistant</h1>
+        <p class="subtitle">Your offline AI companion for rural living and agriculture</p>
+        
+        <form method="post" class="question-form">
+            <div class="input-group">
+                <input type="text" name="prompt" placeholder="Ask about farming, crops, livestock, or rural living..." required>
+                <button type="submit">Ask AI</button>
+            </div>
+        </form>
+        
+        {% if error_message %}
+            <div class="error">
+                <strong>⚠️ Error:</strong>
+                <p>{{ error_message }}</p>
+            </div>
+        {% endif %}
+        
+        {% if response %}
+            <div class="response">
+                <strong>🤖 AI Answer:</strong>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+        
+        <div class="footer">
+            <p>💡 <strong>Try asking:</strong> "What is crop rotation?", "How do I start a vegetable garden?", "When should I plant corn?"</p>
+        </div>
+    </div>
+</body>
+</html>
